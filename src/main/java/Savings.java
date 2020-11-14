@@ -20,7 +20,7 @@ public class Savings extends Account {
         return balance;
     }
 
-    public String printTranHis() {
+    public void printTranHis() {
         return "hi";
     }
 

@@ -1,4 +1,7 @@
+import java.util.ArrayList;
+
 public class Account {
+    ArrayList<String> transHistory = new ArrayList<String>();
     Double balance;
 
     public void Accounts(Double initDeposit){
@@ -21,8 +24,17 @@ public class Account {
         return balance;
     }
 
-    public String printTranHis() {
-        return "hi";
+
+    //Added an arrayList to maintain transaction history
+    //would have to implement transaction at the end of each account action
+    public void addTransaction(String transaction){
+        transHistory.add(transaction);
+    }
+
+    public void printTranHis() {
+        for (String s : transHistory){
+            System.out.println(s);
+        }
     }
 
     public boolean checkIfEmpty(){
