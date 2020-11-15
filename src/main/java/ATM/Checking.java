@@ -1,3 +1,5 @@
+package ATM;
+
 public class Checking extends Account {
 
     public Checking(Double initDeposit){
@@ -21,7 +23,7 @@ public class Checking extends Account {
     }
 
     public void printTranHis() {
-        return "hi";
+        //return "hi";
     }
 
     public boolean checkIfEmpty(){

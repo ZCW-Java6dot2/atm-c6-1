@@ -1,8 +1,13 @@
+package ATM;
+
 import java.util.ArrayList;
 
 public class Account {
     ArrayList<String> transHistory = new ArrayList<String>();
     Double balance;
+
+    public void Accounts(){
+    }
 
     public void Accounts(Double initDeposit){
         this.balance = initDeposit;
@@ -13,7 +18,7 @@ public class Account {
     }
 
     public void Deposit(Double amount){
-        this.balance -= amount;
+        this.balance += amount;
     }
 
     public void Transfer(Object account, Double amount){

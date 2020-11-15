@@ -6,7 +6,7 @@ import org.junit.rules.ExpectedException;
 import static org.junit.Assert.assertEquals;
 
 
-// Test the expected Account class from ATM.
+// Test the expected ATM.Account class from ATM.
 public class AccountTest {
 
     @Test

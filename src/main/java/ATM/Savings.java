@@ -1,6 +1,8 @@
-public class Investment extends Account {
+package ATM;
 
-    public Investment(Double initDeposit){
+public class Savings extends Account {
+
+    public Savings(Double initDeposit){
         this.balance = initDeposit;
     }
 
@@ -21,11 +23,10 @@ public class Investment extends Account {
     }
 
     public void printTranHis() {
-        return "hi";
+        //return "hi";
     }
 
     public boolean checkIfEmpty(){
         return false;
     }
-
 }

@@ -1,5 +1,7 @@
+package ATM;
+
 /**
- * Created by iyasuwatts on 10/17/17.
+ * Created by C6(Buzz, Will, Zekai) on 11/15/2020 (Covid times)
  */
 public class Main {
 
