@@ -14,11 +14,22 @@ public class Account {
     }
 
     public void withdraw(Double amount){
-        this.balance -= amount;
+        if (amount > 0 && amount < balance){
+            this.balance -= amount;
+            addTransaction("Withdraw: " + amount);
+        } else {
+            System.out.print("Error. Insufficient funds");
+        }
     }
 
     public void Deposit(Double amount){
-        this.balance += amount;
+        if (amount > 0){
+            this.balance += amount;
+            addTransaction("Deposit: " + amount);
+        } else {
+            System.out.print("Error. Please enter a valid amount.");
+        }
+
     }
 
     public void Transfer(Object account, Double amount){
