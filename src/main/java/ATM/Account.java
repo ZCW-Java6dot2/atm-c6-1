@@ -6,7 +6,7 @@ public class Account {
     ArrayList<String> transHistory = new ArrayList<String>();
     Double balance;
 
-    public void Accounts(){
+    public Account(){
     }
 
     public void Accounts(Double initDeposit){
