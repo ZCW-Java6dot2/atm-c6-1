@@ -29,7 +29,7 @@ public class AtmProcessor {
         userInfo.put("Newguy", new User("Nobody", "password", account4)); //debugging
     }
 
-    public Integer readIntInput() {
+    public Integer readIntInput() { //Test this
         Scanner prompt = new Scanner(System.in);
         Integer output = null;
         try { //checks for integer input
@@ -102,7 +102,7 @@ public class AtmProcessor {
     }
 
     //used in registerScreen()
-    public boolean newName(String name) {
+    public boolean newName(String name) { //Test this ???
         boolean noExist = true;
         for (User u : userInfo.values()) {
             if (u.getName().equals(name)) {
@@ -115,7 +115,7 @@ public class AtmProcessor {
         return noExist;
     }
 
-    // used in registerScreen()
+    // used in registerScreen() //Test this
     public boolean newUsername(String username) {
         boolean noExist = true;
         if (!userInfo.containsKey(username)){
@@ -151,7 +151,7 @@ public class AtmProcessor {
         return readStrInput();
     }
 
-    //used in logInScreen()
+    //used in logInScreen() //Test this ??
     public boolean validateUserPass(String username, String password) {
         boolean notValidated = true;
 
@@ -254,7 +254,7 @@ public class AtmProcessor {
         }
     }
 
-    public  void promptWithdraw() {
+    public  void promptWithdraw() { //test this
         Double amt = 0.00;
         System.out.println("How much would you like to withdraw?");
         boolean loop = true;
@@ -266,7 +266,7 @@ public class AtmProcessor {
         acctActionScreen();
     }
 
-    public void promptDeposit() {
+    public void promptDeposit() { //test this
         Double amt = 0.00;
         System.out.println("How much would you like to deposit?");
         amt = washMoney();
@@ -275,7 +275,7 @@ public class AtmProcessor {
         acctActionScreen();
     }
 
-    public void transferScreen() {
+    public void transferScreen() { //test this?
         ArrayList<Account> acctList = new ArrayList<Account>(userInfo.get(signedIn).getAccounts()); //retrieves ONLY existing accounts from user that is signed in
         ArrayList<Account> strCurrentAcct = new ArrayList<Account>();
         strCurrentAcct.add(acctAccessed);
@@ -323,26 +323,26 @@ public class AtmProcessor {
         boolean loop = true;
         while(loop) {
             amt = washMoney();
-            loop = acctAccessed.withdraw(amt);
+            loop = acctAccessed.withdraw(amt); //double check this if amt goes to deposit even if you cant withdraw due to insufficent funds
             acctXferTo.Deposit(amt);
         }
         System.out.printf("Your transfer of %.2f from %s to %s completed\n",amt,acctAccessed.getClass().getSimpleName(),acctXferTo.getClass().getSimpleName());
         acctActionScreen();
     }
 
-    public void checkBalScreen() {
+    public void checkBalScreen() { //test this
         Double amt = acctAccessed.checkBalance();
         System.out.printf("%.2f in your account\n",amt);
         acctActionScreen();
     }
 
-    public void printTranScreen() {
+    public void printTranScreen() { //test this
         acctAccessed.printTranHis();
         acctActionScreen();
     }
 
-    public void closeAcctScreen() {
-        ArrayList<Account> acctList = new ArrayList<Account>(userInfo.get(signedIn).getAccounts());
+    public void closeAcctScreen() { //test this
+        //ArrayList<Account> acctList = new ArrayList<Account>(userInfo.get(signedIn).getAccounts());
         boolean acctClosed = userInfo.get(signedIn).closeAccount(acctAccessed);
         if(acctClosed) {
             System.out.printf("Your %s has been closed, have a great day!", acctAccessed.getClass().getSimpleName());
@@ -353,7 +353,7 @@ public class AtmProcessor {
         }
     }
 
-    public void createAcctScreen() {
+    public void createAcctScreen() { //test this??
         //checks for accounts user doesnt have
         String[] arrAcctOffered = {"Checking", "Savings", "Investment"}; //creates an array of offered accounts, did not want to create new objects to compare against
         ArrayList<String> listAcctOffered = new ArrayList<String>(Arrays.asList(arrAcctOffered));
@@ -429,7 +429,7 @@ public class AtmProcessor {
         }
     }
 
-    public Double washMoney() {
+    public Double washMoney() { //test this
         Double amt = 0.00;
         while(true) {
             String userInput = readStrInput();
