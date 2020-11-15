@@ -2,10 +2,14 @@ package ATM;
 
 import com.sun.javafx.binding.StringFormatter;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Account {
     ArrayList<String> transHistory = new ArrayList<String>();
+    Date currentDate = new Date();
+    SimpleDateFormat timeFormat = new SimpleDateFormat("MM/dd/yyyy h:mm a");
     Double balance = 0.0;
 
     public Account(){
@@ -19,7 +23,7 @@ public class Account {
         boolean withDrawFail = true;
         if (amount > 0 && amount <= balance){
             this.balance -= amount;
-            addTransaction(String.format("Withdraw: %.2f",amount)); //used string format to output 2 decimal places - ZH
+            addTransaction(String.format("Withdraw: %.2f",amount) + " at " + timeFormat.format(currentDate)); //used string format to output 2 decimal places - ZH
             withDrawFail = false;
         } else {
             System.out.print("Error. Insufficient funds, enter a smaller amount\n");
@@ -31,7 +35,7 @@ public class Account {
     public void Deposit(Double amount){
         //if (amount > 0){
             this.balance += amount;
-            addTransaction(String.format("Deposit: %.2f",amount)); //used string format to output 2 decimal places - ZH
+            addTransaction(String.format("Deposit: %.2f",amount) + " at " + timeFormat.format(currentDate)); //used string format to output 2 decimal places - ZH
         //} else {
             //System.out.print("Error. Please enter a valid amount.");
        // }
