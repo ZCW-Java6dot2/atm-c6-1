@@ -323,7 +323,7 @@ public class AtmProcessor {
         boolean loop = true;
         while(loop) {
             amt = washMoney();
-            loop = acctAccessed.withdraw(amt); //double check this if amt goes to deposit even if you cant withdraw due to insufficent funds
+            loop = acctAccessed.withdraw(amt); //double check this if amt goes to deposit even if you cant withdraw due to insufficient funds
             acctXferTo.Deposit(amt);
         }
         System.out.printf("Your transfer of %.2f from %s to %s completed\n",amt,acctAccessed.getClass().getSimpleName(),acctXferTo.getClass().getSimpleName());

@@ -52,6 +52,7 @@ public class Account {
         transHistory.add(transaction);
     }
 
+
     public void printTranHis() {
         if (transHistory.size()==0){ //add conditional statement for 0 transactions - ZH
             System.out.println("There are no recent transactions");
@@ -71,5 +72,4 @@ public class Account {
             return false;
         }
     }
-
 }
