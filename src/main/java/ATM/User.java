@@ -15,16 +15,18 @@ public class User {
         //acctList = new ArrayList<ATM.Account>(); commented out for debugging purposes, uncomment later
     }
 
-    public void closeAccount(Account accountType){
+    public boolean closeAccount(Account accountType){
+        boolean acctClosed = false;
         if(acctList.contains(accountType)){
             if(accountType.checkIfEmpty()){
                 acctList.remove(accountType);
+                acctClosed = true;
             }
             else {
                 System.out.println("Please empty your account before closing");
             }
         }
-
+        return acctClosed;
     }
 
     public void openAccount(Account accountType){

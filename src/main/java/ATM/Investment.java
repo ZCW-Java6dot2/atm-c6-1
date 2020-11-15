@@ -8,8 +8,8 @@ public class Investment extends Account {
     public Investment(Double initDeposit){
         this.balance = initDeposit;
     }
-
-    public void withdraw(Double amount){
+/*
+    public boolean withdraw(Double amount){
         this.balance -= amount;
     }
 
@@ -31,6 +31,6 @@ public class Investment extends Account {
 
     public boolean checkIfEmpty(){
         return false;
-    }
+    } */
 
 }
