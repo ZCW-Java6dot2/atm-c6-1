@@ -2,14 +2,14 @@ package ATM;
 
 public class Checking extends Account {
 
-    public Checking(){
+   public Checking(){
     }
 
     public Checking(Double initDeposit){
         this.balance = initDeposit;
     }
 
-    public void withdraw(Double amount){
+/*    public boolean withdraw(Double amount){
         this.balance -= amount;
     }
 
@@ -31,5 +31,5 @@ public class Checking extends Account {
 
     public boolean checkIfEmpty(){
         return false;
-    }
+    } */
 }

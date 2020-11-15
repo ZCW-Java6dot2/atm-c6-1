@@ -2,14 +2,14 @@ package ATM;
 
 public class Savings extends Account {
 
-    public Savings(){
+   public Savings(){
     }
 
     public Savings(Double initDeposit){
         this.balance = initDeposit;
     }
 
-    public void withdraw(Double amount){
+ /*   public boolean withdraw(Double amount){
         this.balance -= amount;
     }
 
@@ -17,19 +17,19 @@ public class Savings extends Account {
         this.balance =+ amount;
     }
 
-    public void Transfer(Object account, Double amount){
+   public void Transfer(Object account, Double amount){
 
     }
 
-    public Double checkBalance(){
+   public Double checkBalance(){
         return balance;
     }
 
-    public void printTranHis() {
+  public void printTranHis() {
         //return "hi";
     }
 
-    public boolean checkIfEmpty(){
+   public boolean checkIfEmpty(){
         return false;
-    }
+    }*/
 }
