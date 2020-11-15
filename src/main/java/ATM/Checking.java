@@ -2,6 +2,9 @@ package ATM;
 
 public class Checking extends Account {
 
+    public Checking(){
+    }
+
     public Checking(Double initDeposit){
         this.balance = initDeposit;
     }
