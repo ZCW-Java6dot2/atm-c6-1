@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
@@ -13,7 +14,6 @@ public class TestAtmProcessor {
 
     @Test
     public void testReadIntInput() {
-
         String input = "2";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
@@ -22,22 +22,21 @@ public class TestAtmProcessor {
         assertEquals(expectedInput, c6Atm.readIntInput());
     }
 
-
-    @Test
-    public void testNewUsername() {
-        String userName = "ZekaiHErooooo";
+    @Test //Negative Test
+    public void testNewUsername1() {
+        String userName = "Zekai Herooooo";
 
         assertFalse(c6Atm.newUsername(userName));
     }
 
-    @Test
+    @Test //Positive Test
     public void testNewUsername2() {
         String userName = "BuzzLight";
 
         assertTrue(c6Atm.newUsername(userName));
     }
 
-    @Test
+    @Test //Negative Test
     public void testValidateUserPass() {
         String userName = "Will";
         String password = "password";
@@ -47,17 +46,15 @@ public class TestAtmProcessor {
 
     @Test
     public void testWashMoney() {
+        Double expectedWash = 2.0;
 
         String input = "2.0";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
         Double actualWash = c6Atm.washMoney();
-        Double expectedWash = 2.0;
-
 
         assertEquals(expectedWash, actualWash);
     }
-
 
 }
 

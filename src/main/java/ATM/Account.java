@@ -39,7 +39,6 @@ public class Account {
         //} else {
             //System.out.print("Error. Please enter a valid amount.");
        // }
-
     }
 
     public Double checkBalance(){
