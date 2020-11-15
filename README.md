@@ -6,15 +6,15 @@ Week 2 project: ATM Simulator
 Every feature must have corresponding unit tests
 Tests should demonstrate proper behavior, and proper handling of misuse (eg. attempts to deposit/transfer/withdraw negative amounts
 
-- User interface: CLI (Command line interface) Only
+- ATM.User interface: CLI (Command line interface) Only
   - Direct Input
   - Numbered options (instead of on-screen buttons)
   - ASCII art welcome but not required
 - Must support account types:
-  - Checking
-  - Savings
-  - Investment
-- Account Actions
+  - ATM.Checking
+  - ATM.Savings
+  - ATM.Investment
+- ATM.Account Actions
   - Withdraw from acct
   - Deposit to acct
   - Transfer across accounts (self)
@@ -24,12 +24,12 @@ Tests should demonstrate proper behavior, and proper handling of misuse (eg. att
   - Check balance
   - **Challenge:** Transfer to another user's account (but not from)
 - Support multiple users
-  - User have associated accounts
+  - ATM.User have associated accounts
   - Can create new user
-  - User are authenticated with a password (generated or provided on user creation)
+  - ATM.User are authenticated with a password (generated or provided on user creation)
   - Can exit a user and enter another user
 - **BONUS** Persistence
-  - User and accounts remain persistent
+  - ATM.User and accounts remain persistent
   - Opportunity for research
 
 

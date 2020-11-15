@@ -1,5 +1,6 @@
+package ATM;
+
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.ArrayList;
 
 public class User {
@@ -11,7 +12,7 @@ public class User {
         this.name = name;
         this.password = password;
         acctList = new ArrayList<Account>(Arrays.asList(account)); //this line is for debugging purposes, delete later
-        //acctList = new ArrayList<Account>(); commented out for debugging purposes, uncomment later
+        //acctList = new ArrayList<ATM.Account>(); commented out for debugging purposes, uncomment later
     }
 
     public void closeAccount(Account accountType){
@@ -27,7 +28,7 @@ public class User {
     }
 
     public void openAccount(Account accountType){
-
+        acctList.add(accountType);
     }
 
     public String getName(){
